@@ -6,25 +6,20 @@ public class Prog14 {
 	{
 		int[] a= {10,30,90,50,20};
 		int n=a.length;
-		int temp;
+		int first=0;
+		int second=0;
 		for(int i=1;i<n;i++)
 		{
-			if(a[i]!=0)
+			if(a[i]>first)
 			{
-				for(int j=0;j<n-i;j++)
-				{
-					if(a[j]<a[j+1])
-					{
-						temp=a[j];
-						a[j]=a[j+1];
-						a[j+1]=temp;
-					}
-				}
+				second=first;
+				first=a[i];
 			}
-			
+			else if(a[i]>second)
+				second=a[i];
 		}
 		
-		System.out.println(a[2]);
+		System.out.println(second);
 
 	}
 

@@ -6,20 +6,16 @@ public class Prog8 {
 	{
 		int[] a= {30,90,50,70};
 		int n=a.length;
-		
+		int high=0;
 		for(int i=1;i<n;i++)
 		{
-			for(int j=0;j<n-i;j++)
+			if(a[i]>high)
 			{
-				if(a[j]<a[j+1])
-				{
-					int temp=a[j];
-					a[j]=a[j+1];
-					a[j+1]=temp;
-				}
+				high=a[i];
 			}
+			
 		}
-		System.out.println(a[0]);
+		System.out.println(high);
 
 	}
 
